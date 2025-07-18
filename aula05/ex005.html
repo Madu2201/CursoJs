@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Meu primeiro programa</title>
+</head>
+<body>
+    <h1>Formatando números</h1>
+    <script>
+        var n1 = 1543.5; // Definindo um número diretamente
+        n1.toFixed(2).replace('.', ','); // Formatando o número para duas casas decimais e substituindo ponto por vírgula
+        document.write(`O valor de n1 é ${n1.toFixed(2).replace('.', ',')}.`); // Exibindo o número formatado
+
+        n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); // Formatando como moeda brasileira
+        document.write(`<br>O valor de n1 em formato de moeda é ${n1.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}.`); // Exibindo o número como moeda
+    </script>
+</body>
+</html>
