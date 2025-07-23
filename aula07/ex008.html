@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input{
+            width: 180px;
+            padding: 5px;
+        }
+        button {
+            padding: 5px 10px;
+        }
+        div#resultado {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="num1" id="num1" placeholder="Digite o primeiro número">
+    +
+    <input type="number" name="num2" id="num2" placeholder="Digite o segundo número">
+    <br><br>
+    <button onclick="somar()">Somar</button>
+    <br><br>
+    <div id="resultado">Resultado:</div>
+    
+    <script>
+        /* Função que pega o valor digitado nos inputs num1 e num2 usando .value,
+           armazena esses valores em variáveis, converte de string para número com 
+           Number() e soma os dois valores. Isso é necessário porque, mesmo sendo 
+           input type="number", o valor retornado pelo input é sempre uma string.
+        */
+        function somar() {
+           var num1 = document.querySelector('input#num1').value;
+           var num2 = document.querySelector('input#num2').value;
+           var resultado= document.querySelector('div#resultado');
+           var soma = Number(num1) + Number(num2);
+           resultado.innerHTML = `A soma entre ${num1} + ${num2} é: ${soma}`;
+           //document.querySelector('div#resultado').innerHTML = `A soma entre ${num1} + ${num2} é: ${soma}`;
+        }
+    </script>
+</body>
+</html>

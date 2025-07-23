@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area{
+            font: normal 15px Arial, sans-serif;
+            background-color: rgb(137, 137, 240);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interação com o DOM
+    </div>
+
+    <script>
+        /* Selecionando o elemento <div> com id 'area' e usando 
+           constante 'const' ao invés de 'var' para evitar reatribuição.
+        */
+        const area = document.querySelector('div#area');
+
+        // Adicionando eventos de clique, mouse entrar e mouse sair
+        area.addEventListener('click', clicar);
+        area.addEventListener('mouseenter', entrar);
+        area.addEventListener('mouseleave', sair);
+
+        /* Funções para manipular os eventos, essas funções 
+           alteram o texto e a cor de fundo do elemento <div>
+        */
+        function clicar() {
+            area.innerText = "Clicou!";
+            area.style.backgroundColor = 'blue';
+        }
+
+        function entrar() {
+            area.innerText = "Entrou!";
+            area.style.backgroundColor = 'green';
+        }
+
+        function sair() {
+            area.innerText = "Saiu!";
+            area.style.backgroundColor = 'red';
+        }
+    </script>
+</body>
+</html>
