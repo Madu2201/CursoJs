@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilitação</title>
+</head>
+<body>
+    <h1>Verificação de Habilitação</h1>
+    Idade: <input type="number" name="txtidade" id="txtidade"> anos
+    <input type="button" value="Verificar" onclick="verificarHabilitacao()">
+    <div id="resultado"></div>
+
+    <script>
+        function verificarHabilitacao(){
+            var txtidade = document.querySelector('input#txtidade').value
+            var resultado = document.querySelector('div#resultado')
+            var idade = Number(txtidade)
+            resultado.innerHTML = `<p>Sua idade é <strong>${txtidade} anos</strong></p>`
+            if (idade >= 18) {
+                resultado.innerHTML += `<p>Você <strong>PODE</strong> tirar sua <strong>HABILITAÇÃO!</strong></p>`
+            } else {
+                resultado.innerHTML += `<p>Você <strong>NÃO</strong> pode tirar sua <strong>HABILITAÇÃO</strong>!.</p>`
+            }
+        }
+    </script>
+</body>
+</html>
