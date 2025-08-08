@@ -1,9 +1,9 @@
 function contar(){
     // Recuperando os elementos da página e guardando em variáveis
-    var inicio = document.querySelector('input#txtinicio').value
-    var fim = document.querySelector('input#txtfim').value
-    var passo = document.querySelector('input#txtpasso').value
-    var res = document.querySelector('div#resultado')
+    let inicio = document.querySelector('input#txtinicio').value
+    let fim = document.querySelector('input#txtfim').value
+    let passo = document.querySelector('input#txtpasso').value
+    let res = document.querySelector('div#resultado')
 
     // Verificando se os campos de início, fim e passo estão vazios. O .length retorna o número de caracteres digitados no campo
     if(inicio.length == 0 || fim.length == 0 || passo.length == 0){
@@ -25,12 +25,12 @@ function contar(){
 
         // Realizando a contagem crescente
         if(inicio < fim){
-            for(var contador = inicio; contador <= fim; contador += passo){
+            for(let contador = inicio; contador <= fim; contador += passo){
                 res.innerHTML += ` ${contador} \u{1F449}` // Adicionando o valor do contador na área de resultado
             }
         // Realizando a contagem regressiva
         } else {
-            for(var contador = inicio; contador >= fim; contador -= passo){
+            for(let contador = inicio; contador >= fim; contador -= passo){
                 res.innerHTML += ` ${contador} \u{1F449}`
             }
         }
