@@ -12,6 +12,7 @@ function contar(){
 
     // Verificando se os campos de início, fim e passo estão vazios. O .length retorna o número de caracteres digitados no campo
     if(inicio.length == 0 || fim.length == 0 || passo.length == 0){
+        res.innerHTML = 'Impossível contar!'
         window.alert('[ERRO] Faltam dados!')
     } else {
         // Convertendo os valores digitados em números inteiros
