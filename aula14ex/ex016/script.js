@@ -4,6 +4,11 @@ function contar(){
     let fim = document.querySelector('input#txtfim').value
     let passo = document.querySelector('input#txtpasso').value
     let res = document.querySelector('div#resultado')
+    let botao = document.querySelector('input#btncontar')
+
+    // Alterando o estilo do botão após o clique
+    botao.style.backgroundColor = 'blue'
+    botao.style.color = 'white'
 
     // Verificando se os campos de início, fim e passo estão vazios. O .length retorna o número de caracteres digitados no campo
     if(inicio.length == 0 || fim.length == 0 || passo.length == 0){
