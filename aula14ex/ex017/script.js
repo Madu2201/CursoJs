@@ -1,7 +1,7 @@
 function tabuada(){
     // Recebe o valor do input e seleciona o elemento select
-    var num = document.querySelector('#txtnum').value
-    var sel = document.querySelector('#seltab')
+    let num = document.querySelector('#txtnum').value
+    let sel = document.querySelector('#seltab')
 
     sel.innerHTML = '' // Limpa o select antes de adicionar novos valores
 
@@ -13,8 +13,8 @@ function tabuada(){
         num = Number(num)
 
         // Loop para gerar a tabuada
-        for(var contador = 1; contador <= 10; contador++){
-            var item = document.createElement('option') // Cria um novo elemento <option> para o select
+        for(let contador = 1; contador <= 10; contador++){
+            let item = document.createElement('option') // Cria um novo elemento <option> para o select
             item.text = `${num} x ${contador} = ${num * contador}` //Define o texto que vai aparecer no option (ex: "5 x 2 = 10")
             item.value = `tab${contador}` // Define o valor interno do option (pode ser usado para identificar cada linha)
             sel.appendChild(item) // Adiciona esse option dentro do select (mostra na tela)
