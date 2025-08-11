@@ -3,7 +3,7 @@ function tabuada(){
     let num = document.querySelector('#txtnum').value
     let sel = document.querySelector('#seltab')
 
-    sel.innerHTML = '' // Limpa o select antes de adicionar novos valores
+    sel.innerHTML = '' /*Limpa o select antes de gerar uma nova tabuada, pois se não ficaria acumulando as tabuadas anteriores e é por isso que está fora do loop de repetição */
 
     // Verifica se o campo está vazio
     if(num.lenght == 0){
