@@ -3,13 +3,13 @@
 ## Sobre o Projeto
 Este projeto é um exercício de JavaScript para manipulação de arrays, validação de números e interação com elementos do DOM.  
 
----
+
 
 ## Pegando elementos do HTML
 - O input, o select e a div de resultado são selecionados e armazenados em variáveis globais.
 - O array `valores` guarda todos os números adicionados, permitindo validação e estatísticas.
 
----
+
 
 ## Função isNumero(n)
 - **O que faz:** Verifica se o número passado está entre 1 e 100.
@@ -19,7 +19,7 @@ Este projeto é um exercício de JavaScript para manipulação de arrays, valida
   - `true` se estiver entre 1 e 100  
   - `false` caso contrário
 
----
+
 
 ## Função inLista(n, l)
 - **O que faz:** Verifica se o número já existe no array de valores.
@@ -31,25 +31,25 @@ Este projeto é um exercício de JavaScript para manipulação de arrays, valida
   - `true` se o número já está na lista  
   - `false` se não está
 
----
+
 
 ## Por que declarar variáveis fora das funções?
 - Variáveis como `lista`, `res` e `valores` são usadas por várias funções.
 - Declarando fora, elas ficam acessíveis globalmente e podem ser compartilhadas entre funções, facilitando a manipulação dos dados e elementos do DOM.
 
----
+
 
 ## Sobre parâmetros de função
 - Os parâmetros `n` e `l` em `inLista(n, l)` são declarados na definição da função.
 - Eles recebem valores quando a função é chamada, não precisam ser declarados novamente dentro da função.
 
----
+
 
 ## Sobre o uso de `.value` e arrays
 - `.value` pega o valor digitado pelo usuário em um input.
 - O array `valores` guarda todos os números adicionados, evitando repetições e facilitando a validação.
 
----
+
 
 ## Função Adcionar()
 - **O que faz:** Adiciona um número à lista se ele for válido e ainda não estiver presente.
@@ -60,7 +60,7 @@ Este projeto é um exercício de JavaScript para manipulação de arrays, valida
   - Se não passar, exibe um alerta informando que o valor é inválido ou já existe.
   - Após adicionar, limpa o input e foca novamente para facilitar a próxima entrada.
 
----
+
 
 ## Função Finalizar()
 - **O que faz:** Exibe estatísticas dos números adicionados.
@@ -75,7 +75,7 @@ Este projeto é um exercício de JavaScript para manipulação de arrays, valida
   - Percorre o array usando um laço `for (let posição in valores)` para somar os valores e atualizar maior/menor.
   - Mostra todas essas informações na div de resultados, formatadas em parágrafos.
 
----
+
 
 ## Lógica do cálculo de estatísticas
 - Inicializa `maior` e `menor` com o primeiro valor do array.
@@ -85,7 +85,6 @@ Este projeto é um exercício de JavaScript para manipulação de arrays, valida
   - Atualiza `menor` se encontrar um valor menor.
 - Exibe os resultados na tela, incluindo a média com duas casas decimais.
 
----
 
 ## Observações Finais
 - O valor do input deve ser capturado dentro da função Adcionar para garantir que sempre seja o valor digitado no momento.
