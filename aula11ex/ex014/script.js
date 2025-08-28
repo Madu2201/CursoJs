@@ -1,11 +1,13 @@
 /* Este código JavaScript altera a mensagem e a imagem com base na hora do dia.
 A função carregar() é chamada quando a página é carregada*/
+
 function carregar(){
-    var msg = document.querySelector('#msg');
-    var foto = document.querySelector('#imagem');
-    var data = new Date();
-    var hora = data.getHours();
-    msg.innerHTML = `Agora são ${hora} horas.`;
+    let msg = document.querySelector('#msg');
+    let foto = document.querySelector('#imagem');
+    let data = new Date(); // Obtem a data e hora atual
+    let hora = data.getHours(); // Obtem a hora atual (0-23)
+
+    msg.innerHTML = `Agora são ${hora} horas.`; // Exibe a hora atual
 
     // Verifica o período do dia e altera a mensagem e a imagem
     if (hora >= 0 && hora < 12) {

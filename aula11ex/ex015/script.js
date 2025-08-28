@@ -1,18 +1,18 @@
 function verificar(){
-    var data = new Date()
-    var ano = data.getFullYear()// Pega o ano atual do sistema
-    var Fano = document.getElementById('txtano')//ano digitado
-    var res = document.getElementById('resultado')//div onde o resultado será exibido
+    let data = new Date()
+    let ano = data.getFullYear()// Pega o ano atual do sistema
+    let Fano = document.getElementById('txtano').value // Pega o valor que o usuário digitou no campo de texto
+    let res = document.getElementById('resultado')//div onde o resultado será exibido
 
     //validação dos dados de entrada (ano vazio ou ano maior que o atual)
-   if(Fano.value.length == 0 || Number(Fano.value) > ano){
+   if(Fano.length == 0 || Number(Fano) > ano){
         window.alert('[ERRO] Verifique os dados e tente novamente!')
    } else {
     //se os dados forem válidos entra aqui e executa o restante do código
-        var fsex = document.getElementsByName('radsex')//pega os elementos pelo name (retorna uma coleção)
-        var idade = ano - Number(Fano.value)//calcula a idade
-        var gênero = '' //cria a variável gênero
-        var img = document.createElement('img') //cria a tag img
+        let fsex = document.getElementsByName('radsex')//pega os elementos pelo name (retorna uma coleção)
+        let idade = ano - Number(Fano)//calcula a idade
+        let gênero = '' //cria a variável gênero
+        let img = document.createElement('img') //cria a tag img
         img.setAttribute('id', 'foto') //define o id da tag img
 
         //verifica qual dos radio buttons foi selecionado

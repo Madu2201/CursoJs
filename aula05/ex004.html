@@ -10,9 +10,12 @@
     <h1>Formatando Strings</h1>
     <script>
         var nome = prompt('Qual é o seu nome?');
-        document.write(`<strong>Seu nome tem ${nome.length} letras.<br></strong>`);
-        document.write(`<strong>Seu nome em maiúsculas é ${nome.toUpperCase()}.<br></strong>`);
-        document.write(`<strong>Seu nome em minúsculas é ${nome.toLowerCase()}.<br></strong>`);
+
+        document.write(`<strong>Seu nome tem ${nome.length} letras.<br></strong>`); // Propriedade length conta os caracteres da string
+
+        document.write(`<strong>Seu nome em maiúsculas é ${nome.toUpperCase()}.<br></strong>`); // Método toUpperCase() converte a string para maiúsculas
+
+        document.write(`<strong>Seu nome em minúsculas é ${nome.toLowerCase()}.<br></strong>`); // Método toLowerCase() converte a string para minúsculas
     </script>
 </body>
 </html>

@@ -13,10 +13,11 @@
 
     <script>
         function verificarHabilitacao(){
-            var txtidade = document.querySelector('input#txtidade').value
-            var resultado = document.querySelector('div#resultado')
-            var idade = Number(txtidade)
-            resultado.innerHTML = `<p>Sua idade é <strong>${txtidade} anos</strong></p>`
+            let txtidade = document.querySelector('input#txtidade').value // Pega o valor do campo de texto
+            let resultado = document.querySelector('div#resultado') // Pega a div onde o resultado será exibido
+            let idade = Number(txtidade) // Converte o valor para número
+
+            resultado.innerHTML = `<p>Sua idade é <strong>${idade} anos</strong></p>`
             if (idade >= 18) {
                 resultado.innerHTML += `<p>Você <strong>PODE</strong> tirar sua <strong>HABILITAÇÃO!</strong></p>`
             } else {

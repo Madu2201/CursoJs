@@ -16,9 +16,10 @@
 
 <script>
     function calcular(){
-        var txtvel = document.querySelector('input#txtvel').value
-        var resultado = document.querySelector('div#resultado')
-        var velocidade = Number(txtvel)
+        let txtvel = document.querySelector('input#txtvel').value // Pega o valor que o usuário digitou no campo de texto.
+        let resultado = document.querySelector('div#resultado') // Pega a div onde o resultado será mostrado.
+        let velocidade = Number(txtvel) // Converte o valor digitado em número.
+
         resultado.innerHTML = `<p>Sua velocidade atual é <strong>${txtvel}Km/h</strong></p>`
         if (velocidade > 60) {
             resultado.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade</p>`

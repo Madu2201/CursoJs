@@ -9,10 +9,14 @@
 <body>
     <h1>Calculadora de Soma</h1>
     <p>Este programa solicita dois números e exibe a soma deles.</p>
+
+
     <script>
-        var n1 = window.prompt("Digite um número:");// O comando window.prompt trata a entrada como string
-        var n2 = window.prompt("Digite outro número:");
-        var soma = Number(n1) + Number(n2);// Convertendo as entradas para números
+        let n1 = window.prompt("Digite um número:");// O comando window.prompt trata a entrada como string
+        let n2 = window.prompt("Digite outro número:");
+
+        let soma = Number(n1) + Number(n2);// Convertendo as entradas para números
+
         window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}.`);// Usando template literals para melhor formatação
     </script>
 </body>

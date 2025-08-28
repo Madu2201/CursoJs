@@ -1,5 +1,6 @@
-var agora = new Date()
-var diaSemana = agora.getDay()
+let agora = new Date() // Data atual
+let diaSemana = agora.getDay() // 0 a 6
+
 /*
     0 - Domingo
     1 - Segunda
@@ -9,6 +10,7 @@ var diaSemana = agora.getDay()
     5 - Sexta
     6 - Sábado
 */
+
 console.log(`Hoje é dia ${diaSemana}`)
 switch (diaSemana) {
     case 0:
